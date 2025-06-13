@@ -1,0 +1,39 @@
+{% include 'index.html' %}
+{% block head %}
+{% endblock %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+</head>
+<body style="background-color: steelblue;">
+    <div>
+        <center>
+            <h1>Sign Up</h1>
+            
+            <h2>{{msg}}</h2>
+            <form action="/aftersignup/" method="POST">
+                <label for="">FULL NAME</label><br>
+                <input type="text" placeholder="FULL NAME" name="name"><br>
+                <br>
+                <label for="">PHONE NUMBER</label><br>
+                <input type="text" placeholder="PHONE NUMBER" name="phone"><br>
+                <br>
+                <label for="">EMAIL</label><br>
+                <input type="email" name="email" id="" placeholder="EMAIL"><br>
+                <br>
+                <label for="">PASSWORD</label><br>
+                <input type="password" name="password" id="" placeholder="PASSWORD"><br>
+                <br>
+                <button type="submit">submit</button>
+
+            </form>
+        </center>
+    </div>
+    
+</body>
+</html>

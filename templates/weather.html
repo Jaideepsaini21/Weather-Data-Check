@@ -1,0 +1,63 @@
+{% block head %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+</head>
+<body style="background-color: rgb(152, 252, 252); text-align: center;">
+  <li style="list-style: none; display:inline; margin-right:15rem;  font-size: 2rem;"><a href="/information/" style="text-decoration: none; color: black;">information</a></li>
+  
+  <li style="list-style: none; display:inline; font-size: 2rem;"><a href="/logout/" style="text-decoration: none; color: black;">logout</a></li>
+  <hr style="color: white;">
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+      
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+              <br>
+              <br>
+      
+              <h1 class="mb-4 pb-2 fw-normal">Check the weather forecast</h1>
+              <br>
+      
+              <div class="input-group rounded mb-3">
+              <form action="/check/",method="POST">
+                <input type="search" class="form-control rounded" placeholder="City" aria-label="Search" name="city"
+                  aria-describedby="search-addon" />
+                <button type="submit">
+                  <span class="input-group-text border-0 fw-bold" id="search-addon">
+                    Check!
+                  </span>
+                </button>
+                </a>
+              </form>
+              </div>
+              <br>
+      
+
+      
+              <div class="card shadow-0 border">
+                <div class="card-body p-4">
+      
+                  <h2 class="mb-1 sfw-normal">{{msg[0]}}</h4>
+                  <h3 class="mb-2">{{t[0]}} <strong style="color:blue">{{msg[1]}}</strong></p>
+                  <h3>{{t[1]}} <strong style="color:blue">{{msg[2]}}</strong></p>
+                  <h3>{{t[2]}} <strong style="color:blue">{{msg[3]}}</strong></p>
+                  <h3>{{t[3]}} <strong style="color:blue">{{msg[4]}}</strong></p>
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+          </div>
+      
+        </div>
+      </section>
+    
+</body>
+</html>
+{% endblock %}

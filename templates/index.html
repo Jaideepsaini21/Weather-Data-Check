@@ -1,0 +1,35 @@
+{% block head %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        li{
+            display: inline;
+            padding: 8%;
+        }
+        a{
+            text-decoration: none;
+            color: chocolate;
+        }
+        a:hover{
+            color: orange;
+        }
+
+    </style>
+</head>
+<body style="background-color: rgb(34, 129, 129); font-size: xx-large;">
+    <li><a href="/" >Home</a></li>
+
+    <li><a href="/login">Login</a></li>
+
+    <li><a href="/signup">Signup</a></li>
+    
+</body>
+</html>
+
+{% endblock %}
